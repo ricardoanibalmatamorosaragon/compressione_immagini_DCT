@@ -25,14 +25,22 @@ def split_list(my_list,n):
     final = [my_list[i * n:(i + 1) * n] for i in range((len(my_list) + n - 1) // n )]
     return final 
 
-def split(array, nrows):
-    ncols=nrows
-    """Split a matrix into sub-matrices."""
+def blockshaped(arr, nrows, ncols):
+    """
+    Return an array of shape (n, nrows, ncols) where
+    n * nrows * ncols = arr.size
 
-    r, h = array.shape
-    return (array.reshape(h//nrows, nrows, -1, ncols)
-                 .swapaxes(1, 2)
-                 .reshape(-1, nrows, ncols))
+    If arr is a 2D array, the returned array should look like n subblocks with
+    each subblock preserving the "physical" layout of arr.
+    """
+    h, w = arr.shape
+    assert h % nrows == 0, "{} rows is not evenly divisble by {}".format(h, nrows)
+    assert w % ncols == 0, "{} cols is not evenly divisble by {}".format(w, ncols)
+    return (arr.reshape(h//nrows, nrows, -1, ncols)
+               .swapaxes(1,2)
+               .reshape(-1, nrows, ncols))
+
+
 def message(x):
     if(x==1):
 		messagebox.showinfo("Error","Wrong parameter F")
@@ -82,32 +90,30 @@ def idct2_process(block):
             block[i][j]=int(tmp)
     return block
 
-def build_final_image(blocks,size_image):
-    #print(blocks[0])
-    blocks=split_list(blocks,size_image)
+def build_final_image(blocks,size_rows,size_cols):
+    blocks=split_list(blocks,size_cols)
     rows=[]
     for block in blocks:
         tmp= np.concatenate(block, axis=1)
         rows.append(tmp)
+   
     image=np.concatenate(rows, axis=0)
+    print(image)
     scipy.misc.imsave('./immagini/outfile.bmp', image) 
     
 
 def DCT_process(image):
-    size = len(image)
-    #print(image)
+    size_rows, size_cols = image.shape
+    print(image)
     dim_blocco=parameter_F.get()
-    size = size - (size%dim_blocco)
-    image_new=image[0:size,0:size]
-    sub_matrixs = split(image_new, dim_blocco)
-    #print(len(sub_matrixs))
-    #print(sub_matrixs[0])
-    #print(dct2(sub_matrixs[0]))
+    size_rows = size_rows - (size_rows%dim_blocco)
+    size_cols = size_cols - (size_cols%dim_blocco)
+    image_new=image[0:size_rows,0:size_cols]
+    print(image_new)
+    sub_matrixs= blockshaped(image_new, dim_blocco,dim_blocco)
     mtxs_dct2=[]
     for i in range(len(sub_matrixs)):
-        #lapprossimazione avviene nel passaggio alla DCT2, se e da modificare iniziare qua
         mtxs_dct2.append(dct2(sub_matrixs[i]))
-        #sub_matrixs[i]=delete_frequence(dct2(sub_matrixs[i]))
     ff_m=[]
     for i in range(len(mtxs_dct2)):
         ff_m.append(delete_frequence(mtxs_dct2[i]))
@@ -115,9 +121,8 @@ def DCT_process(image):
     idct2_mtx=[]
     for i in range(len(ff_m)): 
         idct2_mtx.append(idct2_process(ff_m[i]))
-    #print(idct2_mtx[0])
     
-    build_final_image(idct2_mtx,size)
+    build_final_image(idct2_mtx,size_rows,size_cols)
     
 def plot_image(original):
     f = plt.figure()
@@ -137,11 +142,9 @@ def openImage():
     if process():
         ventana.filename = tkFileDialog.askopenfilename(initialdir = "./Scrivania",title = "Select file",filetypes = (("bmp  files","*.bmp"),("all files","*.*")))
         im = Image.open(ventana.filename)
-        print(ventana.filename)
         p = np.array(im)
-        size_image=len(p)
-        print(size_image)
-        if parameter_F.get() > size_image:
+        nrow, ncol= p.shape
+        if parameter_F.get() > nrow or parameter_F.get() > ncol:
             message(2)
             control=False
     if control:
@@ -166,8 +169,8 @@ entry_d=Entry(ventana,textvariable=parameter_d).place(x=150,y=40)
 
 
 #tasto1= Button(ventana,text="read file.bmp",  command=openImage,bg="#009",fg="white").place(x=10,y=150)
-tasto2= Button(ventana,text="Start Process", command=openImage,bg="#009",fg="white").place(x=140,y=150)
-tasto3= Button(ventana,text="help", command=stampa,bg="#009",fg="white").place(x=270,y=150)
+tasto2= Button(ventana,text="Start Process", command=openImage,bg="#009",fg="white").place(x=10,y=150)
+tasto3= Button(ventana,text="help", command=stampa,bg="#009",fg="white").place(x=325,y=150)
 
 
 ventana.mainloop()
