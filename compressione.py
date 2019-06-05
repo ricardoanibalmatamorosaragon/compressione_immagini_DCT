@@ -93,7 +93,7 @@ def blockshaped(arr, nrows, ncols):
 
 def message(x):
     if(x==1):
-		messagebox.showinfo("Error","Wrong parameter F")
+	messagebox.showinfo("Error","Wrong parameter F")
     if(x==2):
         messagebox.showinfo("Error","F parameter > Size of image")
     if(x==3):
