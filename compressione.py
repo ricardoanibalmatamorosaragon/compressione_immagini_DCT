@@ -18,7 +18,57 @@ def idct2 (block):
   return idct(idct(block.T, norm = 'ortho').T, norm = 'ortho')
 
 def stampa():
-	print('ciao')
+    window = Toplevel(ventana)
+    window.title("Help")
+    #window.geometry("400x200")
+    S = Scrollbar(window)
+    T = Text(window, height=30, width=75)
+    S.pack(side=RIGHT, fill=Y)
+    T.pack(side=LEFT, fill=Y)
+    S.config(command=T.yview)
+    T.config(yscrollcommand=S.set)
+    quote = """
+    Questo script e' stato sviluppato per eseguire la compressione
+    di immagini in formato bmp.
+    
+    I parametri in input:
+    parametro F: 
+    Indica la dimensione dei blocchi nei quali sara' frammentata 
+    l'immagine in input.
+
+    Parametro d: 
+    Indica la qualita' con cui l'immagine sara' compressa, a valori
+    grandi corrispondono un numero di frequenze tagliate
+    minore, quindi la compressione sara' bassa.
+
+    Start process:
+    Apre una schermata che permette di selezionare l'immagine da
+    comprimere e successivamente inizia il processo di compressione.
+    
+    Output: 
+    Genera un'immagine compressa con il nome outfile.bmp nella 
+    stessa cartella dalla quale e' stata selezionata l'immagine 
+    in input.
+    
+    Plot: 
+    Genera un plot contenente l'immagine iniziale a sinistra e
+    l'immagine compressa a destra, con l'obiettivo di rendere piu'
+    facile il confronto.
+
+    Messaggi di Error:
+    "Wrong parameter F":
+    Indica che il parametro F e' minore di 0.
+
+    "F parameter > Size of image":
+    Indica che il parametro F e' piu' grande della dimensione 
+    dell'immagine.
+    
+    "Wrong parameter d":
+    Indica che il parametro non e' compresso nell'intervallo 
+    2*F - 2.
+    """
+    T.insert(END, quote)
+
     
 def split_list(my_list,n):
     n=n/len(my_list[0])
@@ -98,18 +148,18 @@ def build_final_image(blocks,size_rows,size_cols):
         rows.append(tmp)
    
     image=np.concatenate(rows, axis=0)
-    print(image)
+    #print(image)
     scipy.misc.imsave('./immagini/outfile.bmp', image) 
     
 
 def DCT_process(image):
     size_rows, size_cols = image.shape
-    print(image)
+    #print(image)
     dim_blocco=parameter_F.get()
     size_rows = size_rows - (size_rows%dim_blocco)
     size_cols = size_cols - (size_cols%dim_blocco)
     image_new=image[0:size_rows,0:size_cols]
-    print(image_new)
+    #print(image_new)
     sub_matrixs= blockshaped(image_new, dim_blocco,dim_blocco)
     mtxs_dct2=[]
     for i in range(len(sub_matrixs)):
@@ -130,11 +180,14 @@ def plot_image(original):
     mod=mpimg.imread('/home/ricardo/Scrivania/compressione_immagini_DCT/immagini/outfile.bmp')
     plt.axis("off") 
     f.add_subplot(1,2, 1)
-    plt.imshow(original,cmap='gray')
+    plt.title('original image')
+    plt.imshow(original,cmap='gray',aspect='auto')
     plt.axis("off") 
     f.add_subplot(1,2, 2)
-    plt.imshow(mod,cmap='gray')
+    plt.title('compressed image')
+    plt.imshow(mod,cmap='gray',aspect='auto')
     plt.axis("off") 
+    plt.suptitle('image comparison', fontsize=16)
     plt.show(block=True)
 
 def openImage():
