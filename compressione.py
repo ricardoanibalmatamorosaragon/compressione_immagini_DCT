@@ -17,10 +17,10 @@ def dct2 (block):
 def idct2 (block):
   return idct(idct(block.T, norm = 'ortho').T, norm = 'ortho')
 
+#metodo utilizzato per mostrare l'informazione associata ad help
 def stampa():
     window = Toplevel(ventana)
     window.title("Help")
-    #window.geometry("400x200")
     S = Scrollbar(window)
     T = Text(window, height=30, width=75)
     S.pack(side=RIGHT, fill=Y)
@@ -69,7 +69,7 @@ def stampa():
     """
     T.insert(END, quote)
 
-    
+#metodo per generare le righe con le sottomatrici di dim F   
 def split_list(my_list,n):
     n=n/len(my_list[0])
     final = [my_list[i * n:(i + 1) * n] for i in range((len(my_list) + n - 1) // n )]
@@ -90,15 +90,16 @@ def blockshaped(arr, nrows, ncols):
                .swapaxes(1,2)
                .reshape(-1, nrows, ncols))
 
-
+#funzione per mostrare i messaggi di errore
 def message(x):
     if(x==1):
-		messagebox.showinfo("Error","Wrong parameter F")
+	messagebox.showinfo("Error","Wrong parameter F")
     if(x==2):
         messagebox.showinfo("Error","F parameter > Size of image")
     if(x==3):
         messagebox.showinfo("Error","Wrong parameter d")
-  
+
+#funzione di controllo dei parametri 'F' e 'd' 
 def process():
     flag=True
     if parameter_F.get() <= 0:
@@ -109,7 +110,8 @@ def process():
         message(3)
         flag=False
     return flag
-   
+
+#metodo che elimina le frequenze in base al parametro d
 def delete_frequence(block):
     if parameter_d.get()==0:
         for i in range(len(block)):
@@ -127,7 +129,7 @@ def delete_frequence(block):
                     block[i][j]=0
     return block
 
-
+#metodo che calcola l'idct2 di ogni sotto matrice
 def idct2_process(block):
     block=idct2(block)
     for i in range(len(block)):
@@ -140,6 +142,7 @@ def idct2_process(block):
             block[i][j]=int(tmp)
     return block
 
+#metodo che converte un matrice in immagine.bmp
 def build_final_image(blocks,size_rows,size_cols):
     blocks=split_list(blocks,size_cols)
     rows=[]
@@ -148,18 +151,15 @@ def build_final_image(blocks,size_rows,size_cols):
         rows.append(tmp)
    
     image=np.concatenate(rows, axis=0)
-    #print(image)
     scipy.misc.imsave('./immagini/outfile.bmp', image) 
     
-
+#metodo principale, richiama le funzioni descritte in precedenza
 def DCT_process(image):
     size_rows, size_cols = image.shape
-    #print(image)
     dim_blocco=parameter_F.get()
     size_rows = size_rows - (size_rows%dim_blocco)
     size_cols = size_cols - (size_cols%dim_blocco)
     image_new=image[0:size_rows,0:size_cols]
-    #print(image_new)
     sub_matrixs= blockshaped(image_new, dim_blocco,dim_blocco)
     mtxs_dct2=[]
     for i in range(len(sub_matrixs)):
@@ -173,7 +173,8 @@ def DCT_process(image):
         idct2_mtx.append(idct2_process(ff_m[i]))
     
     build_final_image(idct2_mtx,size_rows,size_cols)
-    
+   
+#metodo per il plot dell'immagine originale e compressa
 def plot_image(original):
     f = plt.figure()
     original=mpimg.imread(original)
@@ -221,7 +222,6 @@ read_d = Label(ventana, text="Insert parameter d : ",bg="#006",fg="#FFF").place(
 entry_d=Entry(ventana,textvariable=parameter_d).place(x=150,y=40)
 
 
-#tasto1= Button(ventana,text="read file.bmp",  command=openImage,bg="#009",fg="white").place(x=10,y=150)
 tasto2= Button(ventana,text="Start Process", command=openImage,bg="#009",fg="white").place(x=10,y=150)
 tasto3= Button(ventana,text="help", command=stampa,bg="#009",fg="white").place(x=325,y=150)
 
