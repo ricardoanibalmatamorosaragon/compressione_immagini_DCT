@@ -10,6 +10,7 @@ from scipy.fftpack import dct, idct
 import scipy.misc
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
+import imageio
 
 def dct2 (block):
   return dct(dct(block.T, norm = 'ortho').T, norm = 'ortho')
@@ -195,8 +196,13 @@ def openImage():
     control=True
     if process():
         ventana.filename = tkFileDialog.askopenfilename(initialdir = "./Scrivania",title = "Select file",filetypes = (("bmp  files","*.bmp"),("all files","*.*")))
-        im = Image.open(ventana.filename)
-        p = np.array(im)
+        img=imageio.imread(ventana.filename)
+        if img.ndim == 3:  # colored images
+            # bnimg = img[:, :, 0]
+            bnimg = 0.2989 * img[:, :, 0] + 0.5870 * img[:, :, 1] + 0.1140 * img[:, :, 2] 
+        else:  # grey images
+            bnimg = img
+        p = np.array(bnimg)
         nrow, ncol= p.shape
         if parameter_F.get() > nrow or parameter_F.get() > ncol:
             message(2)
