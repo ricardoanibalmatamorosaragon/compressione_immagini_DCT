@@ -1,0 +1,40 @@
+size matrix 1 : 100
+time to DCT2 python : 0.003107
+time to My_DCT2 python : 3.167676
+
+size matrix 2 : 200
+time to DCT2 python : 0.000837
+time to My_DCT2 python : 21.891581
+
+size matrix 3 : 300
+time to DCT2 python : 0.001751
+time to My_DCT2 python : 74.362612
+
+size matrix 4 : 400
+time to DCT2 python : 0.003179
+time to My_DCT2 python : 178.276496
+
+size matrix 5 : 500
+time to DCT2 python : 0.00512699999996
+time to My_DCT2 python : 347.545585
+
+size matrix 6 : 600
+time to DCT2 python : 0.00783699999999
+time to My_DCT2 python : 599.005452
+
+size matrix 7 : 700
+time to DCT2 python : 0.013181
+time to My_DCT2 python : 987.122504
+
+size matrix 8 : 800
+time to DCT2 python : 0.0212539999998
+time to My_DCT2 python : 1470.392633
+
+size matrix 9 : 900
+time to DCT2 python : 0.0203919999999
+time to My_DCT2 python : 3125.250137
+
+size matrix 10 : 1000
+time to DCT2 python : 0.0269790000002
+time to My_DCT2 python : 2875.13934
+
