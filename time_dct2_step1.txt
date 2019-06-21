@@ -1,0 +1,392 @@
+size matrix 2 : 2
+time to DCT2 python : 0.00049
+time to My_DCT2 python : 0.000759
+
+size matrix 3 : 3
+time to DCT2 python : 0.000387
+time to My_DCT2 python : 0.001579
+
+size matrix 4 : 4
+time to DCT2 python : 0.000423
+time to My_DCT2 python : 0.003204
+
+size matrix 5 : 5
+time to DCT2 python : 0.000405
+time to My_DCT2 python : 0.005798
+
+size matrix 6 : 6
+time to DCT2 python : 0.000497
+time to My_DCT2 python : 0.009626
+
+size matrix 7 : 7
+time to DCT2 python : 0.000479
+time to My_DCT2 python : 0.015039
+
+size matrix 8 : 8
+time to DCT2 python : 0.00044
+time to My_DCT2 python : 0.023186
+
+size matrix 9 : 9
+time to DCT2 python : 0.000528
+time to My_DCT2 python : 0.044097
+
+size matrix 10 : 10
+time to DCT2 python : 0.002632
+time to My_DCT2 python : 0.051361
+
+size matrix 11 : 11
+time to DCT2 python : 0.000833
+time to My_DCT2 python : 0.065448
+
+size matrix 12 : 12
+time to DCT2 python : 0.002466
+time to My_DCT2 python : 0.029153
+
+size matrix 13 : 13
+time to DCT2 python : 7.3e-05
+time to My_DCT2 python : 0.008683
+
+size matrix 14 : 14
+time to DCT2 python : 0.000219
+time to My_DCT2 python : 0.011118
+
+size matrix 15 : 15
+time to DCT2 python : 7.4e-05
+time to My_DCT2 python : 0.014648
+
+size matrix 16 : 16
+time to DCT2 python : 6.9e-05
+time to My_DCT2 python : 0.016168
+
+size matrix 17 : 17
+time to DCT2 python : 8.69999999999e-05
+time to My_DCT2 python : 0.015499
+
+size matrix 18 : 18
+time to DCT2 python : 5.19999999999e-05
+time to My_DCT2 python : 0.018054
+
+size matrix 19 : 19
+time to DCT2 python : 6.3e-05
+time to My_DCT2 python : 0.020979
+
+size matrix 20 : 20
+time to DCT2 python : 4.90000000001e-05
+time to My_DCT2 python : 0.024282
+
+size matrix 21 : 21
+time to DCT2 python : 5.4e-05
+time to My_DCT2 python : 0.027967
+
+size matrix 22 : 22
+time to DCT2 python : 5.8e-05
+time to My_DCT2 python : 0.031991
+
+size matrix 23 : 23
+time to DCT2 python : 7.09999999999e-05
+time to My_DCT2 python : 0.036255
+
+size matrix 24 : 24
+time to DCT2 python : 5.20000000002e-05
+time to My_DCT2 python : 0.044395
+
+size matrix 25 : 25
+time to DCT2 python : 7.70000000001e-05
+time to My_DCT2 python : 0.046795
+
+size matrix 26 : 26
+time to DCT2 python : 7.3e-05
+time to My_DCT2 python : 0.052389
+
+size matrix 27 : 27
+time to DCT2 python : 5.79999999999e-05
+time to My_DCT2 python : 0.058531
+
+size matrix 28 : 28
+time to DCT2 python : 6.60000000001e-05
+time to My_DCT2 python : 0.070974
+
+size matrix 29 : 29
+time to DCT2 python : 0.000123
+time to My_DCT2 python : 0.072403
+
+size matrix 30 : 30
+time to DCT2 python : 6.60000000001e-05
+time to My_DCT2 python : 0.080708
+
+size matrix 31 : 31
+time to DCT2 python : 0.000126
+time to My_DCT2 python : 0.087921
+
+size matrix 32 : 32
+time to DCT2 python : 6.09999999999e-05
+time to My_DCT2 python : 0.096859
+
+size matrix 33 : 33
+time to DCT2 python : 7.40000000001e-05
+time to My_DCT2 python : 0.109426
+
+size matrix 34 : 34
+time to DCT2 python : 0.00011
+time to My_DCT2 python : 0.1198
+
+size matrix 35 : 35
+time to DCT2 python : 0.000105
+time to My_DCT2 python : 0.126588
+
+size matrix 36 : 36
+time to DCT2 python : 7.79999999998e-05
+time to My_DCT2 python : 0.137645
+
+size matrix 37 : 37
+time to DCT2 python : 0.000149
+time to My_DCT2 python : 0.150584
+
+size matrix 38 : 38
+time to DCT2 python : 0.000123
+time to My_DCT2 python : 0.16205
+
+size matrix 39 : 39
+time to DCT2 python : 0.000181
+time to My_DCT2 python : 0.17901
+
+size matrix 40 : 40
+time to DCT2 python : 9.09999999998e-05
+time to My_DCT2 python : 0.194025
+
+size matrix 41 : 41
+time to DCT2 python : 0.000393
+time to My_DCT2 python : 0.203319
+
+size matrix 42 : 42
+time to DCT2 python : 9.90000000001e-05
+time to My_DCT2 python : 0.223453
+
+size matrix 43 : 43
+time to DCT2 python : 0.000238
+time to My_DCT2 python : 0.236912
+
+size matrix 44 : 44
+time to DCT2 python : 0.000151
+time to My_DCT2 python : 0.256554
+
+size matrix 45 : 45
+time to DCT2 python : 0.000102
+time to My_DCT2 python : 0.267355
+
+size matrix 46 : 46
+time to DCT2 python : 0.000159
+time to My_DCT2 python : 0.378641
+
+size matrix 47 : 47
+time to DCT2 python : 0.001079
+time to My_DCT2 python : 0.350872
+
+size matrix 48 : 48
+time to DCT2 python : 0.000112000000001
+time to My_DCT2 python : 0.363173
+
+size matrix 49 : 49
+time to DCT2 python : 0.000225
+time to My_DCT2 python : 0.376832
+
+size matrix 50 : 50
+time to DCT2 python : 0.000115
+time to My_DCT2 python : 0.374351
+
+size matrix 51 : 51
+time to DCT2 python : 0.000159
+time to My_DCT2 python : 0.428382
+
+size matrix 52 : 52
+time to DCT2 python : 0.000141
+time to My_DCT2 python : 0.436601
+
+size matrix 53 : 53
+time to DCT2 python : 0.000363999999999
+time to My_DCT2 python : 0.471404
+
+size matrix 54 : 54
+time to DCT2 python : 0.000131
+time to My_DCT2 python : 0.510236
+
+size matrix 55 : 55
+time to DCT2 python : 0.000139
+time to My_DCT2 python : 0.584061
+
+size matrix 56 : 56
+time to DCT2 python : 0.000168
+time to My_DCT2 python : 0.619765
+
+size matrix 57 : 57
+time to DCT2 python : 0.000295999999999
+time to My_DCT2 python : 0.59617
+
+size matrix 58 : 58
+time to DCT2 python : 0.000249
+time to My_DCT2 python : 0.576287
+
+size matrix 59 : 59
+time to DCT2 python : 0.00043
+time to My_DCT2 python : 0.680762
+
+size matrix 60 : 60
+time to DCT2 python : 0.000168
+time to My_DCT2 python : 0.764772
+
+size matrix 61 : 61
+time to DCT2 python : 0.000502000000001
+time to My_DCT2 python : 0.775954
+
+size matrix 62 : 62
+time to DCT2 python : 0.000294
+time to My_DCT2 python : 0.768509
+
+size matrix 63 : 63
+time to DCT2 python : 0.00015
+time to My_DCT2 python : 0.769728
+
+size matrix 64 : 64
+time to DCT2 python : 0.000354000000002
+time to My_DCT2 python : 0.888129
+
+size matrix 65 : 65
+time to DCT2 python : 0.000177000000001
+time to My_DCT2 python : 0.833761
+
+size matrix 66 : 66
+time to DCT2 python : 0.000171
+time to My_DCT2 python : 1.047616
+
+size matrix 67 : 67
+time to DCT2 python : 0.000695
+time to My_DCT2 python : 0.905654
+
+size matrix 68 : 68
+time to DCT2 python : 0.000191999999998
+time to My_DCT2 python : 1.147823
+
+size matrix 69 : 69
+time to DCT2 python : 0.000253999999998
+time to My_DCT2 python : 1.085701
+
+size matrix 70 : 70
+time to DCT2 python : 0.000269000000003
+time to My_DCT2 python : 1.141518
+
+size matrix 71 : 71
+time to DCT2 python : 0.000702
+time to My_DCT2 python : 1.04222
+
+size matrix 72 : 72
+time to DCT2 python : 0.000154000000002
+time to My_DCT2 python : 1.092505
+
+size matrix 73 : 73
+time to DCT2 python : 0.000751000000001
+time to My_DCT2 python : 1.136418
+
+size matrix 74 : 74
+time to DCT2 python : 0.000374000000001
+time to My_DCT2 python : 1.18497
+
+size matrix 75 : 75
+time to DCT2 python : 0.000152
+time to My_DCT2 python : 1.235478
+
+size matrix 76 : 76
+time to DCT2 python : 0.000249
+time to My_DCT2 python : 1.279575
+
+size matrix 77 : 77
+time to DCT2 python : 0.000351000000002
+time to My_DCT2 python : 1.329207
+
+size matrix 78 : 78
+time to DCT2 python : 0.000207000000003
+time to My_DCT2 python : 1.386252
+
+size matrix 79 : 79
+time to DCT2 python : 0.001112
+time to My_DCT2 python : 1.439702
+
+size matrix 80 : 80
+time to DCT2 python : 0.000157000000002
+time to My_DCT2 python : 1.480096
+
+size matrix 81 : 81
+time to DCT2 python : 0.000153000000005
+time to My_DCT2 python : 1.535551
+
+size matrix 82 : 82
+time to DCT2 python : 0.000472000000002
+time to My_DCT2 python : 1.593477
+
+size matrix 83 : 83
+time to DCT2 python : 0.001045
+time to My_DCT2 python : 1.653283
+
+size matrix 84 : 84
+time to DCT2 python : 0.000202000000002
+time to My_DCT2 python : 1.724879
+
+size matrix 85 : 85
+time to DCT2 python : 0.000247999999999
+time to My_DCT2 python : 1.783391
+
+size matrix 86 : 86
+time to DCT2 python : 0.000562000000002
+time to My_DCT2 python : 1.846165
+
+size matrix 87 : 87
+time to DCT2 python : 0.000355999999996
+time to My_DCT2 python : 1.907511
+
+size matrix 88 : 88
+time to DCT2 python : 0.000227000000002
+time to My_DCT2 python : 1.962172
+
+size matrix 89 : 89
+time to DCT2 python : 0.001406
+time to My_DCT2 python : 2.038255
+
+size matrix 90 : 90
+time to DCT2 python : 0.000301999999998
+time to My_DCT2 python : 2.372467
+
+size matrix 91 : 91
+time to DCT2 python : 0.000304999999997
+time to My_DCT2 python : 2.48358
+
+size matrix 92 : 92
+time to DCT2 python : 0.000334000000002
+time to My_DCT2 python : 2.480451
+
+size matrix 93 : 93
+time to DCT2 python : 0.000411000000007
+time to My_DCT2 python : 2.533065
+
+size matrix 94 : 94
+time to DCT2 python : 0.000735999999996
+time to My_DCT2 python : 2.929368
+
+size matrix 95 : 95
+time to DCT2 python : 0.000296000000006
+time to My_DCT2 python : 2.642493
+
+size matrix 96 : 96
+time to DCT2 python : 0.000212000000005
+time to My_DCT2 python : 3.346042
+
+size matrix 97 : 97
+time to DCT2 python : 0.00251400000001
+time to My_DCT2 python : 3.568164
+
+size matrix 98 : 98
+time to DCT2 python : 0.000304
+time to My_DCT2 python : 3.12603
+
+size matrix 99 : 99
+time to DCT2 python : 0.000261999999992
+time to My_DCT2 python : 2.978721
+
