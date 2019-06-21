@@ -38,7 +38,7 @@ def my_dct2(block):
     return result.T
 
 
-
+'''
 
 #verifica richiesta
 matrix = np.array([[231, 32, 233,161,24,71,140,245],
@@ -64,5 +64,5 @@ print('row1: ',matrix[0])
 print('DCT(row1): ',test_row1)
 print('My DCT(row1): ',mydct)
 print(matrix_dct2)
-
+'''
 
